@@ -5,6 +5,14 @@ class CustomCardTipo2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Card(
+      child: Column(
+        children: [
+          Image(
+            image: NetworkImage('https://images8.alphacoders.com/110/1103710.jpg')
+          )
+        ],
+      ),
+    );
   }
 }
