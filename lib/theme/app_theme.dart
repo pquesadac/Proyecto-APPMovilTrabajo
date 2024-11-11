@@ -15,8 +15,13 @@ class AppTheme {
           titleTextStyle: TextStyle( color: Colors.white, fontSize: 24),
           iconTheme: IconThemeData(color: Colors.white)
         ),
+        //ListTile Theme
         listTileTheme: const ListTileThemeData(
           iconColor: primary,
+        ),
+        //TextButton Theme
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom( foregroundColor: primary)
         )
         
       );
