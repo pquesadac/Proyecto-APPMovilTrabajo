@@ -11,8 +11,7 @@ class Listview2Screen extends StatelessWidget {
   };
 
   final descriptions = const {
-    'Targaryen':
-        'Casa Targaryen: Descendientes de Valyria, conocidos por sus dragones.',
+    'Targaryen':'Casa Targaryen: Descendientes de Valyria, conocidos por sus dragones.',
     'Stark': 'Casa Stark: Los guardianes del Norte, leales y honorables.',
     'Lannister': 'Casa Lannister: Ricos y poderosos, conocidos por su oro.',
     'Baratheon': 'Casa Baratheon: Guerreros fieros y leales.',
