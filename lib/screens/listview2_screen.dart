@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fl_components/screens/details_screen.dart';
 
 class Listview2Screen extends StatelessWidget {
   final options = const ['Targaryen', 'Stark', 'Lannister', 'Baratheon'];
@@ -7,6 +8,14 @@ class Listview2Screen extends StatelessWidget {
     'Stark': 'assets/Stark-icon.png',
     'Lannister': 'assets/Lannister-icon.png',
     'Baratheon': 'assets/Baratheon-icon.png',
+  };
+
+  final descriptions = const {
+    'Targaryen':
+        'Casa Targaryen: Descendientes de Valyria, conocidos por sus dragones.',
+    'Stark': 'Casa Stark: Los guardianes del Norte, leales y honorables.',
+    'Lannister': 'Casa Lannister: Ricos y poderosos, conocidos por su oro.',
+    'Baratheon': 'Casa Baratheon: Guerreros fieros y leales.',
   };
 
   const Listview2Screen({Key? key}) : super(key: key);
@@ -22,11 +31,20 @@ class Listview2Screen extends StatelessWidget {
             itemBuilder: (context, index) {
               final casa = options[index];
               return ListTile(
-                leading: Image.asset(imagePaths[casa]!, width: 40, height: 40), 
+                leading: Image.asset(imagePaths[casa]!, width: 40, height: 40),
                 trailing: const Icon(Icons.arrow_forward_ios_outlined),
                 title: Text(casa),
                 onTap: () {
-                  print(casa);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => detailsScreen(
+                        title: casa,
+                        imagePath: imagePaths[casa]!,
+                        description: descriptions[casa]!,
+                      ),
+                    ),
+                  );
                 },
               );
             },
